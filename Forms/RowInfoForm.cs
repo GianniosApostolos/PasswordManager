@@ -20,9 +20,9 @@ namespace PasswordManager.Forms
         private void createButton_Click(object sender, EventArgs e)
         {
 
-            byte[] encryptedAppTextBox = AesEncryption.Encrypt(appNameTextBox.Text, Env.MASTER_PASSWORD_HASH, System.Text.Encoding.ASCII.GetBytes(Env.IV));
+            byte[] encryptedAppTextBox = AesEncryption.Encrypt(appNameTextBox.Text, Env.MASTER_PASSWORD_HASH);
 
-            byte[] encryptedPasswordTextBox = AesEncryption.Encrypt(passwordTextBox.Text, Env.MASTER_PASSWORD_HASH, System.Text.Encoding.ASCII.GetBytes(Env.IV));
+            byte[] encryptedPasswordTextBox = AesEncryption.Encrypt(passwordTextBox.Text, Env.MASTER_PASSWORD_HASH);
 
             RowGenerator rowGenerator = new RowGenerator(flowLayoutPanel, encryptedAppTextBox, encryptedPasswordTextBox);
             rowGenerator.GenerateRow();

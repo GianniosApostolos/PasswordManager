@@ -226,7 +226,7 @@ namespace PasswordManager.Scripts
         {
             try
             {
-                return AesEncryption.Decrypt(fieldToDecrypt, Env.MASTER_PASSWORD_HASH, System.Text.Encoding.ASCII.GetBytes("SIXTEENCHARATERS"));
+                return AesEncryption.Decrypt(fieldToDecrypt, Env.MASTER_PASSWORD_HASH);
             }
             catch (Exception e)
             {

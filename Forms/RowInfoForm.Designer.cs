@@ -106,11 +106,12 @@
             this.showPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.showPasswordButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPasswordButton.Location = new System.Drawing.Point(180, 129);
             this.showPasswordButton.Name = "showPasswordButton";
             this.showPasswordButton.Size = new System.Drawing.Size(34, 30);
             this.showPasswordButton.TabIndex = 5;
-            this.showPasswordButton.Text = "Show";
+            this.showPasswordButton.Text = "👁";
             this.showPasswordButton.UseVisualStyleBackColor = false;
             this.showPasswordButton.Click += new System.EventHandler(this.showPasswordButton_Click);
             // 
