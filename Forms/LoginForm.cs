@@ -36,5 +36,13 @@ namespace PasswordManager.Forms
                 Application.Exit();
             }
         }
+
+        private void masterPasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                loginButton.PerformClick();
+            }
+        }
     }
 }
