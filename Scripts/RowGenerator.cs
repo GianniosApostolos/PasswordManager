@@ -211,7 +211,6 @@ namespace PasswordManager.Scripts
             _showPasswordButton.Text = _isShowingPassword ? "Hide" : "Show";
             _editButton.Enabled = !_editButton.Enabled;
         }
-
         private void CopyToClipboard()
         {
             if (!string.IsNullOrEmpty(_passwordTextBox.Text))
@@ -289,7 +288,5 @@ namespace PasswordManager.Scripts
                 return "Error decrypting field";
             }
         }
-
     }
-
 }

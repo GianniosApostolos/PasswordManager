@@ -120,10 +120,10 @@
             this.clearClipboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearClipboardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearClipboardButton.ForeColor = System.Drawing.Color.White;
-            this.clearClipboardButton.Location = new System.Drawing.Point(0, 159);
+            this.clearClipboardButton.Location = new System.Drawing.Point(0, 161);
             this.clearClipboardButton.Name = "clearClipboardButton";
             this.clearClipboardButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.clearClipboardButton.Size = new System.Drawing.Size(166, 51);
+            this.clearClipboardButton.Size = new System.Drawing.Size(166, 50);
             this.clearClipboardButton.TabIndex = 8;
             this.clearClipboardButton.Text = "Clear clipboard";
             this.clearClipboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,7 +158,7 @@
             this.utilsButton.Margin = new System.Windows.Forms.Padding(0);
             this.utilsButton.Name = "utilsButton";
             this.utilsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.utilsButton.Size = new System.Drawing.Size(166, 48);
+            this.utilsButton.Size = new System.Drawing.Size(166, 50);
             this.utilsButton.TabIndex = 10;
             this.utilsButton.Text = "Utilities";
             this.utilsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,11 +190,11 @@
             this.prefsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prefsButton.ForeColor = System.Drawing.Color.White;
             this.prefsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.prefsButton.Location = new System.Drawing.Point(0, 210);
+            this.prefsButton.Location = new System.Drawing.Point(0, 211);
             this.prefsButton.Margin = new System.Windows.Forms.Padding(0);
             this.prefsButton.Name = "prefsButton";
             this.prefsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.prefsButton.Size = new System.Drawing.Size(166, 48);
+            this.prefsButton.Size = new System.Drawing.Size(166, 50);
             this.prefsButton.TabIndex = 14;
             this.prefsButton.Text = "Preferences";
             this.prefsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,11 +203,12 @@
             // 
             // overwriteButton
             // 
+            this.overwriteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.overwriteButton.FlatAppearance.BorderSize = 0;
             this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.overwriteButton.ForeColor = System.Drawing.Color.White;
-            this.overwriteButton.Location = new System.Drawing.Point(133, 354);
+            this.overwriteButton.Location = new System.Drawing.Point(130, 344);
             this.overwriteButton.Name = "overwriteButton";
             this.overwriteButton.Size = new System.Drawing.Size(33, 30);
             this.overwriteButton.TabIndex = 13;
@@ -224,10 +225,10 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(0, 354);
+            this.saveButton.Location = new System.Drawing.Point(0, 334);
             this.saveButton.Name = "saveButton";
             this.saveButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.saveButton.Size = new System.Drawing.Size(166, 30);
+            this.saveButton.Size = new System.Drawing.Size(166, 50);
             this.saveButton.TabIndex = 12;
             this.saveButton.Text = "Save";
             this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
