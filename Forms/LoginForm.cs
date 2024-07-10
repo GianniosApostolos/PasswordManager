@@ -20,7 +20,7 @@ namespace PasswordManager.Forms
                 return;
             }
 
-            Env.MASTER_PASSWORD_HASH = DeriveKey.Derive(masterPasswordTextBox.Text, 16);
+            Env.MASTER_PASSWORD_HASH = DeriveKey.Derive(masterPasswordTextBox.Text, 32);
 
             masterPasswordTextBox.Text = string.Empty;
 
