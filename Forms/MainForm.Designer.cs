@@ -37,12 +37,12 @@
             this.lockButton = new System.Windows.Forms.Button();
             this.utilsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.prefsButton = new System.Windows.Forms.Button();
+            this.overwriteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.overwriteButton = new System.Windows.Forms.Button();
-            this.prefsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +78,7 @@
             this.rowPanel.Name = "rowPanel";
             this.rowPanel.Size = new System.Drawing.Size(634, 398);
             this.rowPanel.TabIndex = 2;
+            this.rowPanel.SizeChanged += new System.EventHandler(this.rowPanel_SizeChanged);
             // 
             // panel1
             // 
@@ -180,6 +181,41 @@
             this.panel2.Size = new System.Drawing.Size(166, 450);
             this.panel2.TabIndex = 11;
             // 
+            // prefsButton
+            // 
+            this.prefsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.prefsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.prefsButton.FlatAppearance.BorderSize = 0;
+            this.prefsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prefsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prefsButton.ForeColor = System.Drawing.Color.White;
+            this.prefsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prefsButton.Location = new System.Drawing.Point(0, 210);
+            this.prefsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.prefsButton.Name = "prefsButton";
+            this.prefsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.prefsButton.Size = new System.Drawing.Size(166, 48);
+            this.prefsButton.TabIndex = 14;
+            this.prefsButton.Text = "Preferences";
+            this.prefsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.prefsButton.UseVisualStyleBackColor = false;
+            this.prefsButton.Click += new System.EventHandler(this.prefsButton_Click);
+            // 
+            // overwriteButton
+            // 
+            this.overwriteButton.FlatAppearance.BorderSize = 0;
+            this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.overwriteButton.ForeColor = System.Drawing.Color.White;
+            this.overwriteButton.Location = new System.Drawing.Point(133, 354);
+            this.overwriteButton.Name = "overwriteButton";
+            this.overwriteButton.Size = new System.Drawing.Size(33, 30);
+            this.overwriteButton.TabIndex = 13;
+            this.overwriteButton.Text = "🗘";
+            this.overwriteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.overwriteButton.UseVisualStyleBackColor = true;
+            this.overwriteButton.Click += new System.EventHandler(this.overwriteButton_Click);
+            // 
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -224,41 +260,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(634, 398);
             this.panel5.TabIndex = 13;
-            // 
-            // overwriteButton
-            // 
-            this.overwriteButton.FlatAppearance.BorderSize = 0;
-            this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.overwriteButton.ForeColor = System.Drawing.Color.White;
-            this.overwriteButton.Location = new System.Drawing.Point(133, 354);
-            this.overwriteButton.Name = "overwriteButton";
-            this.overwriteButton.Size = new System.Drawing.Size(33, 30);
-            this.overwriteButton.TabIndex = 13;
-            this.overwriteButton.Text = "🗘";
-            this.overwriteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.overwriteButton.UseVisualStyleBackColor = true;
-            this.overwriteButton.Click += new System.EventHandler(this.overwriteButton_Click);
-            // 
-            // prefsButton
-            // 
-            this.prefsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.prefsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.prefsButton.FlatAppearance.BorderSize = 0;
-            this.prefsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prefsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prefsButton.ForeColor = System.Drawing.Color.White;
-            this.prefsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.prefsButton.Location = new System.Drawing.Point(0, 210);
-            this.prefsButton.Margin = new System.Windows.Forms.Padding(0);
-            this.prefsButton.Name = "prefsButton";
-            this.prefsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.prefsButton.Size = new System.Drawing.Size(166, 48);
-            this.prefsButton.TabIndex = 14;
-            this.prefsButton.Text = "Preferences";
-            this.prefsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.prefsButton.UseVisualStyleBackColor = false;
-            this.prefsButton.Click += new System.EventHandler(this.prefsButton_Click);
             // 
             // MainForm
             // 

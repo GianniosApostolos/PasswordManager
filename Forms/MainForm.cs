@@ -32,7 +32,6 @@ namespace PasswordManager
             {
                 Application.Exit();
             }
-
         }
 
         private void clearClipboardButton_Click(object sender, EventArgs e)
@@ -74,6 +73,11 @@ namespace PasswordManager
         {
             PreferencesForm preferencesForm = new PreferencesForm();
             preferencesForm.Show();
+        }
+
+        private void rowPanel_SizeChanged(object sender, EventArgs e)
+        {
+            DynamicLayoutHandler.ResizeRows(flowLayoutPanel);
         }
     }
 }
