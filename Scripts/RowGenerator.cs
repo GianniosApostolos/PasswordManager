@@ -288,5 +288,28 @@ namespace PasswordManager.Scripts
                 return "Error decrypting field";
             }
         }
+
+        public void HideActionButtons()
+        {
+            _showPasswordButton.Visible = false;
+            _copyToClipboardButton.Visible = false;
+            _editButton.Visible = false;
+            _deleteButton.Visible = false;
+            _separatorPanels[2].Visible = false;
+            _separatorPanels[3].Visible = false;
+            _separatorPanels[4].Visible = false;
+
+        }
+
+        public void ShowActionButtons()
+        {
+            _showPasswordButton.Visible = true;
+            _copyToClipboardButton.Visible = true;
+            _editButton.Visible = true;
+            _deleteButton.Visible = true;
+            _separatorPanels[2].Visible = true;
+            _separatorPanels[3].Visible = true;
+            _separatorPanels[4].Visible = true;
+        }
     }
 }

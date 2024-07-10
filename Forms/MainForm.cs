@@ -11,6 +11,7 @@ namespace PasswordManager
         FlowLayoutPanel flowLayoutPanel;
 
         private bool _isLoggingOut;
+        private bool _actionButtonsVisible = true;
         public MainForm()
         {
             InitializeComponent();
@@ -78,6 +79,17 @@ namespace PasswordManager
         private void rowPanel_SizeChanged(object sender, EventArgs e)
         {
             DynamicLayoutHandler.ResizeRows(flowLayoutPanel);
+
+            if (_actionButtonsVisible && this.Width <= 710)
+            {
+                DynamicLayoutHandler.HideActionButtons(flowLayoutPanel);
+                _actionButtonsVisible = false;
+            }
+            else if (!_actionButtonsVisible && this.Width > 710)
+            {
+                DynamicLayoutHandler.ShowActionButtons(flowLayoutPanel);
+                _actionButtonsVisible = true;
+            }
         }
     }
 }

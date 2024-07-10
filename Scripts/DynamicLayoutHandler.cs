@@ -13,9 +13,28 @@ namespace PasswordManager.Scripts
     {
         public static void ResizeRows(FlowLayoutPanel flowLayoutPanel)
         {
-            foreach (RowGenerator row in flowLayoutPanel.Controls.OfType<RowGenerator>())
+            var rows = flowLayoutPanel.Controls.OfType<RowGenerator>().ToList();
+            foreach (RowGenerator row in rows)
             {
                 row.Width = flowLayoutPanel.Width - 20;
+            }
+        }
+
+        public static void HideActionButtons(FlowLayoutPanel flowLayoutPanel)
+        {
+            var rows = flowLayoutPanel.Controls.OfType<RowGenerator>().ToList();
+            foreach (RowGenerator row in rows)
+            {
+                row.HideActionButtons();
+            }
+        }
+
+        public static void ShowActionButtons(FlowLayoutPanel flowLayoutPanel)
+        {
+            var rows = flowLayoutPanel.Controls.OfType<RowGenerator>().ToList();
+            foreach (RowGenerator row in rows)
+            {
+                row.ShowActionButtons();
             }
         }
     }
