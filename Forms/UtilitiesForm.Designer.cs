@@ -244,6 +244,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UtilitiesForm";
             this.Text = "UtilitiesForm";
+            this.Load += new System.EventHandler(this.UtilitiesForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passLengthTrackBar)).EndInit();

@@ -21,6 +21,11 @@ namespace PasswordManager
             SerializeJson.CreateRowObjectsFromJson(flowLayoutPanel);
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Constants.ApplyColorThemeToFormAndControls(this);
+        }
+
         private void addRowBtn_Click(object sender, EventArgs e)
         {
             RowInfoForm rowInfoForm = new RowInfoForm(flowLayoutPanel);

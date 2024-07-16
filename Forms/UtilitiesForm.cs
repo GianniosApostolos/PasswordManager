@@ -14,6 +14,11 @@ namespace PasswordManager.Forms
             passLengthTrackBar.SetRange(4, 128);
         }
 
+        private void UtilitiesForm_Load(object sender, EventArgs e)
+        {
+            Constants.ApplyColorThemeToFormAndControls(this);
+        }
+
         private void passLengthTrackBar_Scroll(object sender, EventArgs e)
         {
             passwordLengthLabel.Text = passLengthTrackBar.Value.ToString();

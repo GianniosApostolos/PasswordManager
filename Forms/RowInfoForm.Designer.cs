@@ -130,6 +130,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "RowInfoForm";
             this.Text = "RowInfoForm";
+            this.Load += new System.EventHandler(this.RowInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
