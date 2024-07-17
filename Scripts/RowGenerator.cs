@@ -205,14 +205,24 @@ namespace PasswordManager.Scripts
         private void TogglePasswordVisibility()
         {
             _isShowingPassword = !_isShowingPassword;
-            _passwordTextBox.UseSystemPasswordChar = _isShowingPassword;
-            _passwordTextBox.Text = _isShowingPassword ? DecryptField(PasswordText) : Convert.ToBase64String(PasswordText);
+
+            if (!Constants.SHOW_ONLY_NAMES_ON_SHOW)
+            {
+                _passwordTextBox.UseSystemPasswordChar = _isShowingPassword;
+                _passwordTextBox.Text = _isShowingPassword ? DecryptField(PasswordText) : Convert.ToBase64String(PasswordText);
+            }
+
             _appNameTextBox.Text = _isShowingPassword ? DecryptField(AppNameText) : Convert.ToBase64String(AppNameText);
             _showPasswordButton.Text = _isShowingPassword ? "Hide" : "Show";
             _editButton.Enabled = !_editButton.Enabled;
         }
         private void CopyToClipboard()
         {
+            if (Constants.AUTO_CLEAR_CLIPBOARD)
+            {
+                ClipboardCleaner.Instance.StartClearing();
+            }
+
             if (!string.IsNullOrEmpty(_passwordTextBox.Text))
             {
                 if (_isShowingPassword)

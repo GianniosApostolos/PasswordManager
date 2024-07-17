@@ -15,6 +15,7 @@ namespace PasswordManager.Forms
 {
     public partial class PreferencesForm : Form
     {
+
         // All properties below are in Application Settings.
         private bool confirmModalOnLock;
         private bool confirmModalOnOverwrite;

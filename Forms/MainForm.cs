@@ -47,15 +47,18 @@ namespace PasswordManager
 
         private void lockButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("You will not be able to reveal your contents or copy passwords to clipboard.\n\nAre you sure?", "Logging out", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
+            if (!Constants.CONFIRM_MODAL_ON_LOCK)
             {
-                _isLoggingOut = true;
+                Logout();
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("You will not be able to reveal your contents or copy passwords to clipboard.\n\nYour clipboard will be cleared\n\nAre you sure?", "Logging out", MessageBoxButtons.YesNo);
 
-                LoginForm loginForm = new LoginForm();
-                loginForm.Show();
-                this.Close();
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Logout();
+                }
             }
         }
 
@@ -72,7 +75,19 @@ namespace PasswordManager
 
         private void overwriteButton_Click(object sender, EventArgs e)
         {
-            SerializeJson.SerializeRowObjectsToJson(targetPanel: flowLayoutPanel, overwritePreviousSave: true);
+            if (!Constants.CONFIRM_MODAL_ON_OVERWRITE)
+            {
+                SerializeJson.SerializeRowObjectsToJson(targetPanel: flowLayoutPanel, overwritePreviousSave: true);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to overwrite the previous save?", "Overw rite", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    SerializeJson.SerializeRowObjectsToJson(targetPanel: flowLayoutPanel, overwritePreviousSave: true);
+                }
+            }
         }
 
         private void prefsButton_Click(object sender, EventArgs e)
@@ -95,6 +110,18 @@ namespace PasswordManager
                 DynamicLayoutHandler.ShowActionButtons(flowLayoutPanel);
                 _actionButtonsVisible = true;
             }
+        }
+
+        private void Logout()
+        {
+            Clipboard.Clear();
+            ClipboardCleaner.Instance.StopClearing();
+
+            _isLoggingOut = true;
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

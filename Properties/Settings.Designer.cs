@@ -145,7 +145,7 @@ namespace PasswordManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
         public int AutoClearClipboardSeconds {
             get {
                 return ((int)(this["AutoClearClipboardSeconds"]));

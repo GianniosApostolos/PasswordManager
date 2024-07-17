@@ -50,6 +50,11 @@ namespace PasswordManager.Forms
         {
             if (!String.IsNullOrWhiteSpace(generatePasswordTextBox.Text))
             {
+                if (Constants.AUTO_CLEAR_CLIPBOARD)
+                {
+                    ClipboardCleaner.Instance.StartClearing();
+                }
+
                 Clipboard.SetText(generatePasswordTextBox.Text);
             }
         }

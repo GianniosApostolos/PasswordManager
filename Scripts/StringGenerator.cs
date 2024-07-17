@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace PasswordManager.Scripts
 {
@@ -64,6 +65,11 @@ namespace PasswordManager.Scripts
             for (int i = 0; i < passwordLength; i++)
             {
                 generatedPassword.Append(shuffledPasswordCharacters[rnd.Next(0, shuffledPasswordCharacters.Length)]);
+            }
+
+            if (Constants.GENERATE_PASSWORD_AND_COPY)
+            {
+                Clipboard.SetText(generatedPassword.ToString());
             }
 
             return generatedPassword.ToString();

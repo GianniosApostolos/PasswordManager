@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PasswordManager.Helper
@@ -42,10 +43,13 @@ namespace PasswordManager.Helper
 
         public static void ApplyColorThemeToFormAndControls(Form selectedForm)
         {
-            selectedForm.ForeColor = FOREGROUND_COLOR;
-            selectedForm.BackColor = BACKGROUND_COLOR_DARK;
+            if (!Debugger.IsAttached)
+            {
+                selectedForm.ForeColor = FOREGROUND_COLOR;
+                selectedForm.BackColor = BACKGROUND_COLOR_DARK;
 
-            ApplyColorThemeToControls(selectedForm.Controls);
+                ApplyColorThemeToControls(selectedForm.Controls);
+            }
         }
 
         private static void ApplyColorThemeToControls(Control.ControlCollection controls)

@@ -55,6 +55,7 @@
             this.applyButton = new System.Windows.Forms.Button();
             this.autoClearClipboardSecondsTextBox = new System.Windows.Forms.TextBox();
             this.resetColorsButton = new System.Windows.Forms.Button();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // confirmModalOnLockCheckBox
@@ -185,9 +186,9 @@
             this.label9.Location = new System.Drawing.Point(424, 139);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 21);
+            this.label9.Size = new System.Drawing.Size(135, 21);
             this.label9.TabIndex = 15;
-            this.label9.Text = "BackGround Color";
+            this.label9.Text = "Background Color";
             // 
             // button2
             // 
@@ -397,5 +398,6 @@
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.TextBox autoClearClipboardSecondsTextBox;
         private System.Windows.Forms.Button resetColorsButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }
