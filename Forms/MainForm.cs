@@ -12,6 +12,9 @@ namespace PasswordManager
 
         private bool _isLoggingOut;
         private bool _actionButtonsVisible = true;
+
+        private Timer _resizeTimer;
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,6 +22,10 @@ namespace PasswordManager
             appNameLabel.Width = Constants.APP_NAME_WIDTH;
             passwordLabel.Width = Constants.PASSWORD_WIDTH;
             SerializeJson.CreateRowObjectsFromJson(flowLayoutPanel);
+
+            _resizeTimer = new Timer();
+            _resizeTimer.Interval = 40;
+            _resizeTimer.Tick += OnResizeTimerTick;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -96,22 +103,6 @@ namespace PasswordManager
             preferencesForm.Show();
         }
 
-        private void rowPanel_SizeChanged(object sender, EventArgs e)
-        {
-            DynamicLayoutHandler.ResizeRows(flowLayoutPanel);
-
-            if (_actionButtonsVisible && this.Width <= 710)
-            {
-                DynamicLayoutHandler.HideActionButtons(flowLayoutPanel);
-                _actionButtonsVisible = false;
-            }
-            else if (!_actionButtonsVisible && this.Width > 710)
-            {
-                DynamicLayoutHandler.ShowActionButtons(flowLayoutPanel);
-                _actionButtonsVisible = true;
-            }
-        }
-
         private void Logout()
         {
             Clipboard.Clear();
@@ -122,6 +113,34 @@ namespace PasswordManager
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close();
+        }
+
+        private void rowPanel_SizeChanged(object sender, EventArgs e)
+        {
+            _resizeTimer.Stop();
+            _resizeTimer.Start();
+        }
+
+        private void OnResizeTimerTick(object sender, EventArgs e)
+        {
+            // Stop the timer and update the UI
+            _resizeTimer.Stop();
+            flowLayoutPanel.SuspendLayout();
+
+            bool shouldShowButtons = this.Width > 710;
+
+            if (_actionButtonsVisible != shouldShowButtons)
+            {
+                DynamicLayoutHandler.UpdateRows(flowLayoutPanel, shouldShowButtons);
+                _actionButtonsVisible = shouldShowButtons;
+            }
+            else
+            {
+                // Just resize rows without changing button visibility
+                DynamicLayoutHandler.ResizeRows(flowLayoutPanel);
+            }
+
+            flowLayoutPanel.ResumeLayout();
         }
     }
 }

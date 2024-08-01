@@ -74,10 +74,12 @@
             this.rowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.rowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.rowPanel.Location = new System.Drawing.Point(0, 0);
             this.rowPanel.Name = "rowPanel";
             this.rowPanel.Size = new System.Drawing.Size(634, 398);
             this.rowPanel.TabIndex = 2;
+            this.rowPanel.WrapContents = false;
             this.rowPanel.SizeChanged += new System.EventHandler(this.rowPanel_SizeChanged);
             // 
             // panel1

@@ -108,6 +108,7 @@ namespace PasswordManager.Forms
         private void applyButton_Click(object sender, EventArgs e)
         {
             SaveAllSettings();
+            this.Close();
         }
 
         private void BindApplicationPropertiesToForm()

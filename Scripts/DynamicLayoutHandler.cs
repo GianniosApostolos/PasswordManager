@@ -20,21 +20,20 @@ namespace PasswordManager.Scripts
             }
         }
 
-        public static void HideActionButtons(FlowLayoutPanel flowLayoutPanel)
+        public static void UpdateRows(FlowLayoutPanel flowLayoutPanel, bool showActionButtons)
         {
             var rows = flowLayoutPanel.Controls.OfType<RowGenerator>().ToList();
             foreach (RowGenerator row in rows)
             {
-                row.HideActionButtons();
-            }
-        }
-
-        public static void ShowActionButtons(FlowLayoutPanel flowLayoutPanel)
-        {
-            var rows = flowLayoutPanel.Controls.OfType<RowGenerator>().ToList();
-            foreach (RowGenerator row in rows)
-            {
-                row.ShowActionButtons();
+                row.Width = flowLayoutPanel.Width - 20;
+                if (showActionButtons)
+                {
+                    row.ShowActionButtons();
+                }
+                else
+                {
+                    row.HideActionButtons();
+                }
             }
         }
     }

@@ -34,6 +34,8 @@ namespace PasswordManager.Scripts
 
         public RowGenerator(FlowLayoutPanel targetPanel, byte[] appNameText, byte[] passwordText)
         {
+            this.DoubleBuffered = true;
+
             TargetPanel = targetPanel;
             AppNameText = appNameText;
             PasswordText = passwordText;
