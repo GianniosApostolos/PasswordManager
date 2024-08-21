@@ -56,6 +56,7 @@
             this.autoClearClipboardSecondsTextBox = new System.Windows.Forms.TextBox();
             this.resetColorsButton = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // confirmModalOnLockCheckBox
@@ -329,12 +330,20 @@
             this.resetColorsButton.UseVisualStyleBackColor = true;
             this.resetColorsButton.Click += new System.EventHandler(this.resetColorsButton_Click);
             // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(-1, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(738, 2);
+            this.label2.TabIndex = 29;
+            // 
             // PreferencesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(736, 495);
+            this.ClientSize = new System.Drawing.Size(734, 495);
             this.Controls.Add(this.resetColorsButton);
             this.Controls.Add(this.autoClearClipboardSecondsTextBox);
             this.Controls.Add(this.applyButton);
@@ -359,9 +368,12 @@
             this.Controls.Add(this.confirmModalOnLockLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.confirmModalOnLockCheckBox);
+            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(750, 535);
+            this.MinimumSize = new System.Drawing.Size(750, 534);
             this.Name = "PreferencesForm";
             this.Text = "PreferencesForm";
             this.Load += new System.EventHandler(this.PreferencesForm_Load);
@@ -399,5 +411,6 @@
         private System.Windows.Forms.TextBox autoClearClipboardSecondsTextBox;
         private System.Windows.Forms.Button resetColorsButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -109,8 +109,6 @@
             // allCheckBox
             // 
             this.allCheckBox.AutoSize = true;
-            this.allCheckBox.Checked = true;
-            this.allCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.allCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allCheckBox.Location = new System.Drawing.Point(4, 4);
             this.allCheckBox.Margin = new System.Windows.Forms.Padding(4);
@@ -119,12 +117,11 @@
             this.allCheckBox.TabIndex = 0;
             this.allCheckBox.Text = "All";
             this.allCheckBox.UseVisualStyleBackColor = true;
+            this.allCheckBox.CheckedChanged += new System.EventHandler(this.allCheckBox_CheckedChanged);
             // 
             // upperCaseCheckBox
             // 
             this.upperCaseCheckBox.AutoSize = true;
-            this.upperCaseCheckBox.Checked = true;
-            this.upperCaseCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.upperCaseCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upperCaseCheckBox.Location = new System.Drawing.Point(56, 4);
             this.upperCaseCheckBox.Margin = new System.Windows.Forms.Padding(4);
@@ -137,8 +134,6 @@
             // lowerCaseCheckBox
             // 
             this.lowerCaseCheckBox.AutoSize = true;
-            this.lowerCaseCheckBox.Checked = true;
-            this.lowerCaseCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.lowerCaseCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lowerCaseCheckBox.Location = new System.Drawing.Point(200, 4);
             this.lowerCaseCheckBox.Margin = new System.Windows.Forms.Padding(4);
@@ -151,8 +146,6 @@
             // digitsCheckBox
             // 
             this.digitsCheckBox.AutoSize = true;
-            this.digitsCheckBox.Checked = true;
-            this.digitsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.digitsCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.digitsCheckBox.Location = new System.Drawing.Point(4, 33);
             this.digitsCheckBox.Margin = new System.Windows.Forms.Padding(4);
@@ -165,8 +158,6 @@
             // symbolsCheckBox
             // 
             this.symbolsCheckBox.AutoSize = true;
-            this.symbolsCheckBox.Checked = true;
-            this.symbolsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.symbolsCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.symbolsCheckBox.Location = new System.Drawing.Point(76, 33);
             this.symbolsCheckBox.Margin = new System.Windows.Forms.Padding(4);
@@ -228,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(445, 556);
+            this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.passwordLengthLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -242,6 +233,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(460, 600);
             this.Name = "UtilitiesForm";
             this.Text = "UtilitiesForm";
             this.Load += new System.EventHandler(this.UtilitiesForm_Load);

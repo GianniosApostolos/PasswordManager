@@ -58,5 +58,28 @@ namespace PasswordManager.Forms
                 Clipboard.SetText(generatePasswordTextBox.Text);
             }
         }
+
+        private void allCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allCheckBox.Checked)
+            {
+                upperCaseCheckBox.Checked = true;
+                lowerCaseCheckBox.Checked = true;
+                digitsCheckBox.Checked = true;
+                symbolsCheckBox.Checked = true;
+
+                upperCaseCheckBox.Enabled = false;
+                lowerCaseCheckBox.Enabled = false;
+                digitsCheckBox.Enabled = false;
+                symbolsCheckBox.Enabled = false;
+            }
+            else
+            {
+                upperCaseCheckBox.Enabled = true;
+                lowerCaseCheckBox.Enabled = true;
+                digitsCheckBox.Enabled = true;
+                symbolsCheckBox.Enabled = true;
+            }
+        }
     }
 }

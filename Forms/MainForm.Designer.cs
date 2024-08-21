@@ -60,7 +60,7 @@
             this.addRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addRowBtn.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
             this.addRowBtn.ForeColor = System.Drawing.Color.White;
-            this.addRowBtn.Location = new System.Drawing.Point(0, 384);
+            this.addRowBtn.Location = new System.Drawing.Point(0, 385);
             this.addRowBtn.Name = "addRowBtn";
             this.addRowBtn.Size = new System.Drawing.Size(166, 66);
             this.addRowBtn.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.rowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.rowPanel.Location = new System.Drawing.Point(0, 0);
             this.rowPanel.Name = "rowPanel";
-            this.rowPanel.Size = new System.Drawing.Size(634, 398);
+            this.rowPanel.Size = new System.Drawing.Size(633, 399);
             this.rowPanel.TabIndex = 2;
             this.rowPanel.WrapContents = false;
             this.rowPanel.SizeChanged += new System.EventHandler(this.rowPanel_SizeChanged);
@@ -90,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(634, 49);
+            this.panel1.Size = new System.Drawing.Size(633, 49);
             this.panel1.TabIndex = 3;
             // 
             // passwordLabel
@@ -178,9 +178,9 @@
             this.panel2.Controls.Add(this.utilsButton);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(634, 0);
+            this.panel2.Location = new System.Drawing.Point(633, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 450);
+            this.panel2.Size = new System.Drawing.Size(166, 451);
             this.panel2.TabIndex = 11;
             // 
             // prefsButton
@@ -210,7 +210,7 @@
             this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.overwriteButton.ForeColor = System.Drawing.Color.White;
-            this.overwriteButton.Location = new System.Drawing.Point(130, 344);
+            this.overwriteButton.Location = new System.Drawing.Point(130, 345);
             this.overwriteButton.Name = "overwriteButton";
             this.overwriteButton.Size = new System.Drawing.Size(33, 30);
             this.overwriteButton.TabIndex = 13;
@@ -227,7 +227,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(0, 334);
+            this.saveButton.Location = new System.Drawing.Point(0, 335);
             this.saveButton.Name = "saveButton";
             this.saveButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.saveButton.Size = new System.Drawing.Size(166, 50);
@@ -252,7 +252,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(634, 52);
+            this.panel4.Size = new System.Drawing.Size(633, 52);
             this.panel4.TabIndex = 12;
             // 
             // panel5
@@ -261,7 +261,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 52);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(634, 398);
+            this.panel5.Size = new System.Drawing.Size(633, 399);
             this.panel5.TabIndex = 13;
             // 
             // MainForm
@@ -269,10 +269,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.MinimumSize = new System.Drawing.Size(200, 120);
             this.Name = "MainForm";
             this.Text = "EzManager";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
