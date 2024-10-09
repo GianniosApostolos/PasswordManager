@@ -50,12 +50,12 @@
             // copyGeneratePasswordButton
             // 
             this.copyGeneratePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copyGeneratePasswordButton.Location = new System.Drawing.Point(392, 356);
+            this.copyGeneratePasswordButton.Location = new System.Drawing.Point(399, 349);
             this.copyGeneratePasswordButton.Margin = new System.Windows.Forms.Padding(4);
             this.copyGeneratePasswordButton.Name = "copyGeneratePasswordButton";
-            this.copyGeneratePasswordButton.Size = new System.Drawing.Size(30, 25);
+            this.copyGeneratePasswordButton.Size = new System.Drawing.Size(35, 35);
             this.copyGeneratePasswordButton.TabIndex = 15;
-            this.copyGeneratePasswordButton.Text = "Copy";
+            this.copyGeneratePasswordButton.Text = "📋";
             this.copyGeneratePasswordButton.UseVisualStyleBackColor = true;
             this.copyGeneratePasswordButton.Click += new System.EventHandler(this.copyGeneratePasswordButton_Click);
             // 

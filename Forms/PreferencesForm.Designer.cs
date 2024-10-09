@@ -323,12 +323,12 @@
             // resetColorsButton
             // 
             this.resetColorsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetColorsButton.Location = new System.Drawing.Point(672, 178);
+            this.resetColorsButton.Location = new System.Drawing.Point(677, 169);
             this.resetColorsButton.Name = "resetColorsButton";
-            this.resetColorsButton.Size = new System.Drawing.Size(29, 33);
+            this.resetColorsButton.Size = new System.Drawing.Size(35, 35);
             this.resetColorsButton.TabIndex = 28;
-            this.resetColorsButton.Text = "R";
-            this.resetColorsButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.resetColorsButton.Text = "↶";
+            this.toolTip.SetToolTip(this.resetColorsButton, "Reset colors to default values.");
             this.resetColorsButton.UseVisualStyleBackColor = true;
             this.resetColorsButton.Click += new System.EventHandler(this.resetColorsButton_Click);
             // 
