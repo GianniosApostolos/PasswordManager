@@ -17,6 +17,11 @@ namespace PasswordManager.Forms
 
         }
 
+        private void RowInfoForm_Load(object sender, EventArgs e)
+        {
+            Constants.ApplyColorThemeToFormAndControls(this);
+        }
+
         private void createButton_Click(object sender, EventArgs e)
         {
 

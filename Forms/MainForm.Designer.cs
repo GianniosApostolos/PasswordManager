@@ -37,12 +37,12 @@
             this.lockButton = new System.Windows.Forms.Button();
             this.utilsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.prefsButton = new System.Windows.Forms.Button();
+            this.overwriteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.overwriteButton = new System.Windows.Forms.Button();
-            this.prefsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,7 +60,7 @@
             this.addRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addRowBtn.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
             this.addRowBtn.ForeColor = System.Drawing.Color.White;
-            this.addRowBtn.Location = new System.Drawing.Point(0, 384);
+            this.addRowBtn.Location = new System.Drawing.Point(0, 385);
             this.addRowBtn.Name = "addRowBtn";
             this.addRowBtn.Size = new System.Drawing.Size(166, 66);
             this.addRowBtn.TabIndex = 1;
@@ -74,10 +74,13 @@
             this.rowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.rowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.rowPanel.Location = new System.Drawing.Point(0, 0);
             this.rowPanel.Name = "rowPanel";
-            this.rowPanel.Size = new System.Drawing.Size(634, 398);
+            this.rowPanel.Size = new System.Drawing.Size(633, 399);
             this.rowPanel.TabIndex = 2;
+            this.rowPanel.WrapContents = false;
+            this.rowPanel.SizeChanged += new System.EventHandler(this.rowPanel_SizeChanged);
             // 
             // panel1
             // 
@@ -87,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(634, 49);
+            this.panel1.Size = new System.Drawing.Size(633, 49);
             this.panel1.TabIndex = 3;
             // 
             // passwordLabel
@@ -119,10 +122,10 @@
             this.clearClipboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearClipboardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearClipboardButton.ForeColor = System.Drawing.Color.White;
-            this.clearClipboardButton.Location = new System.Drawing.Point(0, 159);
+            this.clearClipboardButton.Location = new System.Drawing.Point(0, 161);
             this.clearClipboardButton.Name = "clearClipboardButton";
             this.clearClipboardButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.clearClipboardButton.Size = new System.Drawing.Size(166, 51);
+            this.clearClipboardButton.Size = new System.Drawing.Size(166, 50);
             this.clearClipboardButton.TabIndex = 8;
             this.clearClipboardButton.Text = "Clear clipboard";
             this.clearClipboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +160,7 @@
             this.utilsButton.Margin = new System.Windows.Forms.Padding(0);
             this.utilsButton.Name = "utilsButton";
             this.utilsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.utilsButton.Size = new System.Drawing.Size(166, 48);
+            this.utilsButton.Size = new System.Drawing.Size(166, 50);
             this.utilsButton.TabIndex = 10;
             this.utilsButton.Text = "Utilities";
             this.utilsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,10 +178,46 @@
             this.panel2.Controls.Add(this.utilsButton);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(634, 0);
+            this.panel2.Location = new System.Drawing.Point(633, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 450);
+            this.panel2.Size = new System.Drawing.Size(166, 451);
             this.panel2.TabIndex = 11;
+            // 
+            // prefsButton
+            // 
+            this.prefsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.prefsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.prefsButton.FlatAppearance.BorderSize = 0;
+            this.prefsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prefsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prefsButton.ForeColor = System.Drawing.Color.White;
+            this.prefsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prefsButton.Location = new System.Drawing.Point(0, 211);
+            this.prefsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.prefsButton.Name = "prefsButton";
+            this.prefsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.prefsButton.Size = new System.Drawing.Size(166, 50);
+            this.prefsButton.TabIndex = 14;
+            this.prefsButton.Text = "Preferences";
+            this.prefsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.prefsButton.UseVisualStyleBackColor = false;
+            this.prefsButton.Click += new System.EventHandler(this.prefsButton_Click);
+            // 
+            // overwriteButton
+            // 
+            this.overwriteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.overwriteButton.FlatAppearance.BorderSize = 0;
+            this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.overwriteButton.ForeColor = System.Drawing.Color.White;
+            this.overwriteButton.Location = new System.Drawing.Point(130, 345);
+            this.overwriteButton.Name = "overwriteButton";
+            this.overwriteButton.Size = new System.Drawing.Size(33, 30);
+            this.overwriteButton.TabIndex = 13;
+            this.overwriteButton.Text = "🗘";
+            this.overwriteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.overwriteButton.UseVisualStyleBackColor = true;
+            this.overwriteButton.Click += new System.EventHandler(this.overwriteButton_Click);
             // 
             // saveButton
             // 
@@ -188,10 +227,10 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(0, 354);
+            this.saveButton.Location = new System.Drawing.Point(0, 335);
             this.saveButton.Name = "saveButton";
             this.saveButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.saveButton.Size = new System.Drawing.Size(166, 30);
+            this.saveButton.Size = new System.Drawing.Size(166, 50);
             this.saveButton.TabIndex = 12;
             this.saveButton.Text = "Save";
             this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +252,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(634, 52);
+            this.panel4.Size = new System.Drawing.Size(633, 52);
             this.panel4.TabIndex = 12;
             // 
             // panel5
@@ -222,56 +261,23 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 52);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(634, 398);
+            this.panel5.Size = new System.Drawing.Size(633, 399);
             this.panel5.TabIndex = 13;
-            // 
-            // overwriteButton
-            // 
-            this.overwriteButton.FlatAppearance.BorderSize = 0;
-            this.overwriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overwriteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.overwriteButton.ForeColor = System.Drawing.Color.White;
-            this.overwriteButton.Location = new System.Drawing.Point(133, 354);
-            this.overwriteButton.Name = "overwriteButton";
-            this.overwriteButton.Size = new System.Drawing.Size(33, 30);
-            this.overwriteButton.TabIndex = 13;
-            this.overwriteButton.Text = "🗘";
-            this.overwriteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.overwriteButton.UseVisualStyleBackColor = true;
-            this.overwriteButton.Click += new System.EventHandler(this.overwriteButton_Click);
-            // 
-            // prefsButton
-            // 
-            this.prefsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.prefsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.prefsButton.FlatAppearance.BorderSize = 0;
-            this.prefsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prefsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prefsButton.ForeColor = System.Drawing.Color.White;
-            this.prefsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.prefsButton.Location = new System.Drawing.Point(0, 210);
-            this.prefsButton.Margin = new System.Windows.Forms.Padding(0);
-            this.prefsButton.Name = "prefsButton";
-            this.prefsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.prefsButton.Size = new System.Drawing.Size(166, 48);
-            this.prefsButton.TabIndex = 14;
-            this.prefsButton.Text = "Preferences";
-            this.prefsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.prefsButton.UseVisualStyleBackColor = false;
-            this.prefsButton.Click += new System.EventHandler(this.prefsButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.MinimumSize = new System.Drawing.Size(200, 120);
             this.Name = "MainForm";
             this.Text = "EzManager";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

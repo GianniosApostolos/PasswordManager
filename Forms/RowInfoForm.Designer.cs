@@ -128,8 +128,11 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.appNameTextBox);
             this.ForeColor = System.Drawing.Color.White;
+            this.MaximumSize = new System.Drawing.Size(270, 325);
+            this.MinimumSize = new System.Drawing.Size(270, 325);
             this.Name = "RowInfoForm";
             this.Text = "RowInfoForm";
+            this.Load += new System.EventHandler(this.RowInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

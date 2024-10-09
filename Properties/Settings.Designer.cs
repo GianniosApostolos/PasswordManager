@@ -34,5 +34,125 @@ namespace PasswordManager.Properties {
                 this["JsonFileSavePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ConfirmModalOnLock {
+            get {
+                return ((bool)(this["ConfirmModalOnLock"]));
+            }
+            set {
+                this["ConfirmModalOnLock"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ConfirmModalOnOverwrite {
+            get {
+                return ((bool)(this["ConfirmModalOnOverwrite"]));
+            }
+            set {
+                this["ConfirmModalOnOverwrite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowOnlyNamesOnShow {
+            get {
+                return ((bool)(this["ShowOnlyNamesOnShow"]));
+            }
+            set {
+                this["ShowOnlyNamesOnShow"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowRandomCharsOnDecryptFail {
+            get {
+                return ((bool)(this["ShowRandomCharsOnDecryptFail"]));
+            }
+            set {
+                this["ShowRandomCharsOnDecryptFail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color ForegroundColor {
+            get {
+                return ((global::System.Drawing.Color)(this["ForegroundColor"]));
+            }
+            set {
+                this["ForegroundColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30, 30, 30")]
+        public global::System.Drawing.Color BackgroundColorDark {
+            get {
+                return ((global::System.Drawing.Color)(this["BackgroundColorDark"]));
+            }
+            set {
+                this["BackgroundColorDark"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("40, 40, 40")]
+        public global::System.Drawing.Color BackgroundColorLight {
+            get {
+                return ((global::System.Drawing.Color)(this["BackgroundColorLight"]));
+            }
+            set {
+                this["BackgroundColorLight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GenerateAndCopyPassword {
+            get {
+                return ((bool)(this["GenerateAndCopyPassword"]));
+            }
+            set {
+                this["GenerateAndCopyPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoClearClipboard {
+            get {
+                return ((bool)(this["AutoClearClipboard"]));
+            }
+            set {
+                this["AutoClearClipboard"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int AutoClearClipboardSeconds {
+            get {
+                return ((int)(this["AutoClearClipboardSeconds"]));
+            }
+            set {
+                this["AutoClearClipboardSeconds"] = value;
+            }
+        }
     }
 }

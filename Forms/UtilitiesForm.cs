@@ -14,6 +14,11 @@ namespace PasswordManager.Forms
             passLengthTrackBar.SetRange(4, 128);
         }
 
+        private void UtilitiesForm_Load(object sender, EventArgs e)
+        {
+            Constants.ApplyColorThemeToFormAndControls(this);
+        }
+
         private void passLengthTrackBar_Scroll(object sender, EventArgs e)
         {
             passwordLengthLabel.Text = passLengthTrackBar.Value.ToString();
@@ -45,7 +50,35 @@ namespace PasswordManager.Forms
         {
             if (!String.IsNullOrWhiteSpace(generatePasswordTextBox.Text))
             {
+                if (Constants.AUTO_CLEAR_CLIPBOARD)
+                {
+                    ClipboardCleaner.Instance.StartClearing();
+                }
+
                 Clipboard.SetText(generatePasswordTextBox.Text);
+            }
+        }
+
+        private void allCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allCheckBox.Checked)
+            {
+                upperCaseCheckBox.Checked = true;
+                lowerCaseCheckBox.Checked = true;
+                digitsCheckBox.Checked = true;
+                symbolsCheckBox.Checked = true;
+
+                upperCaseCheckBox.Enabled = false;
+                lowerCaseCheckBox.Enabled = false;
+                digitsCheckBox.Enabled = false;
+                symbolsCheckBox.Enabled = false;
+            }
+            else
+            {
+                upperCaseCheckBox.Enabled = true;
+                lowerCaseCheckBox.Enabled = true;
+                digitsCheckBox.Enabled = true;
+                symbolsCheckBox.Enabled = true;
             }
         }
     }

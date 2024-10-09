@@ -12,15 +12,21 @@ namespace PasswordManager.Forms
             InitializeComponent();
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            Constants.BindApplicationPropertiesToConstants();
+            Constants.ApplyColorThemeToFormAndControls(this);
+        }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(masterPasswordTextBox.Text) || masterPasswordTextBox.Text.Length < 8)
+            if (string.IsNullOrWhiteSpace(masterPasswordTextBox.Text) || masterPasswordTextBox.Text.Length < 8)
             {
                 MessageBox.Show("Password should be at least 8 characters.", "Invalid password");
                 return;
             }
 
-            Env.MASTER_PASSWORD_HASH = DeriveKey.Derive(masterPasswordTextBox.Text, 16);
+            Env.MASTER_PASSWORD_HASH = DeriveKey.Derive(masterPasswordTextBox.Text, 32);
 
             masterPasswordTextBox.Text = string.Empty;
 
