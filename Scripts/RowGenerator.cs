@@ -297,7 +297,9 @@ namespace PasswordManager.Scripts
             catch (Exception e)
             {
                 _rowDecryptedSuccessfully = false;
-                return "Error decrypting field";
+
+                return Constants.RANDOM_CHARS_ON_DECRYPT_FAIL ? Convert.ToBase64String(fieldToDecrypt) : "Error decrypting field";
+
             }
         }
 
