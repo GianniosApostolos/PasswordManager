@@ -57,6 +57,8 @@
             this.resetColorsButton = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.backgroundColorLightButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // confirmModalOnLockCheckBox
@@ -321,7 +323,7 @@
             // resetColorsButton
             // 
             this.resetColorsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetColorsButton.Location = new System.Drawing.Point(649, 178);
+            this.resetColorsButton.Location = new System.Drawing.Point(672, 178);
             this.resetColorsButton.Name = "resetColorsButton";
             this.resetColorsButton.Size = new System.Drawing.Size(29, 33);
             this.resetColorsButton.TabIndex = 28;
@@ -338,12 +340,36 @@
             this.label2.Size = new System.Drawing.Size(738, 2);
             this.label2.TabIndex = 29;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(424, 176);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(135, 21);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Background Color";
+            // 
+            // backgroundColorLightButton
+            // 
+            this.backgroundColorLightButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backgroundColorLightButton.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.backgroundColorLightButton.Location = new System.Drawing.Point(574, 178);
+            this.backgroundColorLightButton.Name = "backgroundColorLightButton";
+            this.backgroundColorLightButton.Size = new System.Drawing.Size(76, 21);
+            this.backgroundColorLightButton.TabIndex = 30;
+            this.backgroundColorLightButton.Text = "Select";
+            this.backgroundColorLightButton.UseVisualStyleBackColor = true;
+            this.backgroundColorLightButton.Click += new System.EventHandler(this.backgroundColorLightButton_Click);
+            // 
             // PreferencesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(734, 495);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.backgroundColorLightButton);
             this.Controls.Add(this.resetColorsButton);
             this.Controls.Add(this.autoClearClipboardSecondsTextBox);
             this.Controls.Add(this.applyButton);
@@ -412,5 +438,7 @@
         private System.Windows.Forms.Button resetColorsButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button backgroundColorLightButton;
     }
 }
