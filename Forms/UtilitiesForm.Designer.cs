@@ -234,6 +234,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(460, 600);
+            this.MinimumSize = new System.Drawing.Size(460, 600);
             this.Name = "UtilitiesForm";
             this.Text = "UtilitiesForm";
             this.Load += new System.EventHandler(this.UtilitiesForm_Load);
