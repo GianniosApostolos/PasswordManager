@@ -13,8 +13,6 @@ namespace PasswordManager.Helper
             {
                 return rfc2898DeriveBytes.GetBytes(keySize);
             }
-
         }
-
     }
 }

@@ -294,12 +294,11 @@ namespace PasswordManager.Scripts
                 _rowDecryptedSuccessfully = true;
                 return AesEncryption.Decrypt(fieldToDecrypt, Env.MASTER_PASSWORD_HASH);
             }
-            catch (Exception e)
+            catch
             {
                 _rowDecryptedSuccessfully = false;
 
                 return Constants.RANDOM_CHARS_ON_DECRYPT_FAIL ? Convert.ToBase64String(fieldToDecrypt) : "Error decrypting field";
-
             }
         }
 
@@ -312,7 +311,6 @@ namespace PasswordManager.Scripts
             _separatorPanels[2].Visible = false;
             _separatorPanels[3].Visible = false;
             _separatorPanels[4].Visible = false;
-
         }
 
         public void ShowActionButtons()
