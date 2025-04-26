@@ -17,10 +17,11 @@ namespace PasswordManager.Helper
 
         private ClipboardCleaner()
         {
-            clipboardTimer = new Timer();
-
-            // Converts saved value from seconds to milliseconds. Minimum 1 second.
-            clipboardTimer.Interval = Math.Max(Constants.AUTO_CLEAR_CLIPBOARD_SECONDS * 1000, 1000);
+            clipboardTimer = new Timer
+            {
+                // Converts saved value from seconds to milliseconds. Minimum 1 second.
+                Interval = Math.Max(Constants.AUTO_CLEAR_CLIPBOARD_SECONDS * 1000, 1000)
+            };
 
             clipboardTimer.Tick += ClearKeyboardPeriodically;
             isCleaning = false;

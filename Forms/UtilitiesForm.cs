@@ -41,6 +41,12 @@ namespace PasswordManager.Forms
                 if (option.Value)
                 {
                     generatePasswordTextBox.Text = StringGenerator.GeneratePassword(passLengthTrackBar.Value, optionsDictionary);
+
+                    if (Constants.GENERATE_PASSWORD_AND_COPY)
+                    {
+                        Clipboard.SetText(generatePasswordTextBox.Text);
+                    }
+
                     return;
                 }
             }

@@ -28,6 +28,8 @@ namespace PasswordManager.Forms
         private bool autoClearClipboard;
         private int autoClearClipboardSeconds;
 
+        private bool _hasResetColors;
+
         public PreferencesForm()
         {
             InitializeComponent();
@@ -131,9 +133,9 @@ namespace PasswordManager.Forms
             Settings.Default.ConfirmModalOnOverwrite = confirmModalOnOverwrite;
             Settings.Default.ShowOnlyNamesOnShow = showOnlyNamesOnShow;
             Settings.Default.ShowRandomCharsOnDecryptFail = showRandomCharsOnDecryptFail;
-            Settings.Default.ForegroundColor = foregroundColor;
-            Settings.Default.BackgroundColorDark = backgroundColorDark;
-            Settings.Default.BackgroundColorLight = backgroundColorLight;
+            Settings.Default.ForegroundColor = _hasResetColors ? Constants.FOREGROUND_COLOR_DEFAULT : foregroundColor;
+            Settings.Default.BackgroundColorDark = _hasResetColors ? Constants.BACKGROUND_COLOR_DARK_DEFAULT : backgroundColorDark;
+            Settings.Default.BackgroundColorLight = _hasResetColors ? Constants.BACKGROUND_COLOR_LIGHT_DEFAULT : backgroundColorLight;
             Settings.Default.GenerateAndCopyPassword = generateAndCopyPassword;
             Settings.Default.AutoClearClipboard = autoClearClipboard;
             Settings.Default.AutoClearClipboardSeconds = autoClearClipboardSeconds;
@@ -142,10 +144,7 @@ namespace PasswordManager.Forms
 
         private void resetColorsButton_Click(object sender, EventArgs e)
         {
-            Settings.Default.ForegroundColor = Constants.FOREGROUND_COLOR_DEFAULT;
-            Settings.Default.BackgroundColorDark = Constants.BACKGROUND_COLOR_DARK_DEFAULT;
-            Settings.Default.BackgroundColorLight = Constants.BACKGROUND_COLOR_LIGHT_DEFAULT;
-            Settings.Default.Save();
+            _hasResetColors = true;
         }
     }
 }

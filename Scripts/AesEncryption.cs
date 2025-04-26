@@ -6,7 +6,6 @@ namespace PasswordManager.Scripts
 {
     internal class AesEncryption
     {
-
         public static byte[] Encrypt(string plainText, byte[] key)
         {
             byte[] encryptedText;
@@ -14,14 +13,12 @@ namespace PasswordManager.Scripts
 
             using (Aes aesAlg = Aes.Create())
             {
-
                 aesAlg.GenerateIV();
                 iv = aesAlg.IV;
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(key, iv);
 
                 using (MemoryStream msEncrypt = new MemoryStream())
                 {
-
                     // Write the IV to the beginning of the stream
                     msEncrypt.Write(iv, 0, iv.Length);
 
@@ -65,5 +62,4 @@ namespace PasswordManager.Scripts
             return decryptedText;
         }
     }
-
 }
